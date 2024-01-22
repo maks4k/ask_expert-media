@@ -1,0 +1,103 @@
+:root{
+    --color-yellow:#ffcc4a;
+    --color-green:#4eaf4e;
+    --color-dark:#151515;
+    --color-gray:#ebebeb;
+    --color-white:#fff;
+}
+body,*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"lato",sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.heading{
+    font-family: "Cabin", sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.header{
+    background-color: rgba(27, 27, 27, 0.91);
+    padding: 40px;
+}
+.header__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.header__logo{
+    font-size: 30px;
+    color:var(--color-white);
+}
+.logo{
+    display: flex;
+    column-gap: 11px;
+}
+.nav__menu{
+    display: flex;
+    gap: 10px 30px;
+    flex-wrap: wrap;
+}
+.nav__link{
+    font-size: 17.728px;
+    color:var(--color-white);
+    
+}
+.header__phone{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 42px;
+    padding: 8px 41px 8px 10px;
+    column-gap: 11px;
+}
+.hero__book-text{
+    color: var(--color-dark);
+}
+.action-btn{
+        display: inline-flex;
+        align-items: center;
+        background-color: var(--color-white);
+        border-radius: 42px;
+        padding: 8px 41px 8px 10px;
+        column-gap: 11px; 
+}
+.hero{
+    background-color: var(--color-gray);
+}
+.hero__info{
+    max-width: 508px;
+}
+.label{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 147%;
+    border-radius: 20px;
+    padding: 0px 11px;
+}
+.label_yellow{
+    background-color: var(--color-yellow);
+}
+.hero__heaiding{
+    font-size: 50px;
+}
+.hero__label{
+    display: inline-block;
+    margin-bottom: 19px;
+}
+.hero__text{
+    margin-top: 20px;
+    margin-bottom: 29px;
+}
