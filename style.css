@@ -76,6 +76,7 @@ li{
 }
 .hero{
     background-color: var(--color-gray);
+    
 }
 .hero__info{
     max-width: 508px;
@@ -100,4 +101,24 @@ li{
 .hero__text{
     margin-top: 20px;
     margin-bottom: 29px;
+}
+/* .hero__row{
+    background-image: url(img/Photo.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 260px 0;
+} */
+/* позциионирование картикни
+.hero__row{
+    position: relative;
+    padding: 260px 0;
+}
+.hero__image{
+    position: absolute;
+    top: 0 ;
+    right: -420px;
+} */
+.hero__row{
+    display: flex;
 }
