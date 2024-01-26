@@ -122,3 +122,25 @@ li{
 .hero__row{
     display: flex;
 }
+.advantages__row{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.advantages-card{
+    border-radius: 20px;
+    padding: 48px;
+    padding-top: 237px;
+    width: 388px;
+}
+.advantages__heading{
+    font-size: 25px;
+}
+.advantages__text{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.advantages__link{
+    border-radius: 55px;
+    padding: 16px 31px;
+}
