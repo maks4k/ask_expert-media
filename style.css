@@ -25,7 +25,7 @@ li{
 .container{
     max-width: 1200px;
     margin: 0 auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .header{
     background-color: var(--color-dark);
@@ -178,7 +178,7 @@ li{
     position: absolute;
     top: 0;
     left: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .advantages-card__icons-1{
     transform: rotate(30deg) translate(-10px,-40px);
