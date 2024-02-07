@@ -209,6 +209,8 @@ li{
     font-size: 150px;
     position: absolute;
     -webkit-text-stroke: 1px var(--color-black);
-    color: transparent;
-    
+    color: transparent;  
+}
+.statistics{
+    background-color: #ffcc4a;
 }
