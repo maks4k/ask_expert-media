@@ -212,5 +212,22 @@ li{
     color: transparent;  
 }
 .statistics{
-    background-color: #ffcc4a;
+    padding: 133px 0px;
+    background:linear-gradient(rgba(251,195,54,0.9),rgba(251,195,54,0.9)), url(img/statistics-photo.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+}
+.statistics__row{
+    display: flex;
+}
+.label_white{
+    background-color: var(--color-white);
+}
+.statistics__info{
+max-width: 375px;
+}
+.statistics__heading{
+    font-size: 45px;
+    margin-top: 22px;
+    margin-bottom: 20px;
 }
