@@ -331,7 +331,7 @@ max-width: 375px;
     background-position: 50% 20%;  
 }
 .latest__buton{
-    
+    border-radius: 50%;
 }
 .latest__project{
     display: flex;
