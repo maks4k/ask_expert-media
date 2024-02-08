@@ -212,6 +212,7 @@ li{
     -webkit-text-stroke: 1px var(--color-black);
     color: transparent;  
 }
+                        /* Статистикс */
 .statistics{
     padding: 133px 0px;
     background:linear-gradient(rgba(251,195,54,0.9),rgba(251,195,54,0.9)), url(img/statistics-photo.png);
@@ -320,4 +321,18 @@ max-width: 375px;
     display: inline-block;
     padding: 40px;
     margin-top: 30px;
+}
+.latest{
+    width: 100%;
+    height: 1100px;
+    background: linear-gradient(rgba(24, 24, 24, 0.95),rgba(24, 24, 24, 0.95)),url(img/Photo-latest.png);
+    /* background-image: url(img/Photo-latest.png); */
+    background-repeat: no-repeat;
+    background-position: 50% 20%;  
+}
+.latest__buton{
+    
+}
+.latest__project{
+    display: flex;
 }
