@@ -421,3 +421,27 @@ max-width: 375px;
     top: 70px;
     left: 260px;
 }
+/* секция формы  */
+.form{
+    width: 100%;
+    background-color: #985ACE;
+    height: 1000px;
+}
+.form__heading{
+    text-align: center;
+    font-size: 45px;
+    color: var(--color-gray);
+}
+.form__info{
+    width: 259px;
+    height: 427px;
+    background-color: var(--color-white);
+    border-radius: 100px;
+    transform: translate(50%,50%);
+}
+.form-authorization{
+    width: 30%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
