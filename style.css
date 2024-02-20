@@ -421,6 +421,8 @@ max-width: 375px;
     top: 70px;
     left: 260px;
 }
+
+/* фидбэк */
 .feedback__row {
     width: 654px;
     margin: 0 auto;
@@ -455,7 +457,7 @@ max-width: 375px;
     border-radius: 50%;
     border: 2px solid var(--color-black);
     margin-right: 15px;
-    margin-top: 275px;
+    margin-top: 255px;
     position: relative;
     cursor: pointer;
     z-index: 1;
