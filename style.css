@@ -422,26 +422,92 @@ max-width: 375px;
     left: 260px;
 }
 /* секция формы  */
-.form{
-    width: 100%;
-    background-color: #985ACE;
-    height: 1000px;
-}
-.form__heading{
-    text-align: center;
-    font-size: 45px;
-    color: var(--color-gray);
-}
-.form__info{
-    width: 259px;
-    height: 427px;
-    background-color: var(--color-white);
-    border-radius: 100px;
-    transform: translate(50%,50%);
-}
-.form-authorization{
-    width: 30%;
-    border: 1px solid red;
+.author__row{
+    background-color: var(--color-green);
+    /* position: relative; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.author__heading{
+    color: var(--color-gray);
+    font-size: 43px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.author__form{
+    
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.7);
+    background-color: var(--color-black);
+    border-radius: 40px;
+}
+.form__name{
+    border-radius: 10px;
+    text-align: center;
+    color: var(--color-black);
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+.form__password{
+    border-radius: 10px;
+    text-align: center;
+    color: var(--color-black);
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+.form_radio{
+    color: var(--color-gray);
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+.form__sex1{
+    appearance: none;
+}
+
+.form__sex1::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+}
+.form__sex3{
+    appearance: none;
+}
+.form__sex3::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.form__sex2{
+    
+    cursor: pointer;
+}
+.form__sex4{
+    
+    cursor: pointer;
+}
+.form__sex1:checked{
+    opacity: 1;
 }

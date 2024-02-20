@@ -140,19 +140,22 @@
             </div>
         </div>
     </section>
-    <section class="form">
-        <h2 class="heading form__heading">Registration</h2>
-        <div class="container form__row">
-            <div class="form__info">
-            <form class="form-authorization" action="#">
-                <input type="text">
-                <input type="text">
-                <input type="email">
-                <input type="password">
-                <input type="password">
+    <section class="author">
+        <div class="container author__row">
+            <h3 class="heading author__heading">Registration</h3>
+            <form class="author__form"  action="#">
+                <input class="form__name" type="text" name="username" placeholder="Имя пользователя">
+                <input class="form__password" type="password" name="pasword" placeholder="Пароль">
+                <div class="form_radio">
+                <input class="form__sex1" type="radio" name="sex" id="man" value="man">
+                <label class=" heading form__sex2" for="man">Ваш пол</label>
+                <input class="form__sex3" type="radio" name="sex" id="woman" value="woman">
+                <label class="heading form__sex4" for="woman">Ваш пол</label>
+                </div>   
             </form>
+             
         </div>
-        </div>
+        
     </section>
     
     
