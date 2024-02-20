@@ -421,3 +421,58 @@ max-width: 375px;
     top: 70px;
     left: 260px;
 }
+.feedback__row {
+    width: 654px;
+    margin: 0 auto;
+    text-align: center;
+}
+.label_green{
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+.feedback__blockquote{
+    font-size: 40px;
+    color: #cecece;
+    margin-top: 23px;
+    margin-bottom: 33px;
+}
+.feedback__akcent{
+    color: var(--color-black);
+}
+.feedback__slider{
+    border: 1px solid blue;
+}
+.feedback__control{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-black);
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
+
+}
+.feedback__control:last-child{
+    margin-right: 0px;
+}
+.feedback__control::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-black);
+    opacity: 0;
+    transition: 0.2ms;
+}
+.feedback__control:checked::after{
+    opacity: 1;
+}
+.feedback__slides{
+    border: 2px solid orange;
+    height: 300px;
+}
