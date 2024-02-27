@@ -323,11 +323,9 @@ max-width: 375px;
     margin-top: 30px;
 }
 .latest{
-    border: 1px solid red;
     width: 1920px;
     height: 2000px;
     background: linear-gradient(rgba(24, 24, 24, 0.95),rgba(24, 24, 24, 0.95)),url(img/Photo-latest.png);
-    /* background-image: url(img/Photo-latest.png); */
     background-repeat: no-repeat;
     background-position: 50% 20%; 
     width: 100%;
@@ -371,7 +369,6 @@ max-width: 375px;
 }
 .latest__card{
     margin: auto 0;
-    border: 4px solid green;
     max-width: 1200px;
     max-height: 1500px;
     display: flex;
@@ -411,7 +408,6 @@ max-width: 375px;
     transform: translate(110px,-350px);
 }
 .item-1_2{
-    /* border: 1px solid red; */
     position: absolute;
     top: 30px;
     left: 50px;
@@ -424,7 +420,6 @@ max-width: 375px;
 /* секция формы  */
 .author__row{
     background-color: var(--color-green);
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,8 +433,6 @@ max-width: 375px;
     padding-bottom: 20px;
 }
 .author__form{
-    
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     width: 300px;
