@@ -470,44 +470,77 @@ max-width: 375px;
     gap: 15px;
     position: relative;
 }
+.form__pol{
+    color: var(--color-white);
+
+}
+.form__sumb{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+/* Убираем для значения для инпута */
 .form__sex1{
     appearance: none;
 }
-
-.form__sex1::after{
+/* Заного рисуем элемент через бефоре для лейбла,большой кружок */
+.form__sex2::before{
     content: '';
-    width: 20px;
-    height: 20px;
-    background-color: green;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    background-color: var(--color-gray);
+    border-radius: 50%;
+}
+/* Заного рисуем маленький в нем кружок для лейбла */
+/* и скрывает его через опасити */
+.form__sex2::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-green);
     position: absolute;
     top: 0;
-    left: -20px;
+    left: 0;
     border-radius: 50%;
-    cursor: pointer;
+    top: 6px;
     opacity: 0;
+    
+    
+}
+/* Связываем дефолтный инпут и маленький кружок в режиме чекед и задаем зет индекс 1 */
+.form__sex1:checked + .form__sex2::after{
+    opacity: 1;
+    z-index: 1;
 }
 .form__sex3{
     appearance: none;
 }
-.form__sex3::after{
+.form__sex4::before{
     content: '';
-    width: 20px;
-    height: 20px;
-    background-color: green;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-gray);
+    /* border: 5px solid red; */
     position: absolute;
-    top: 0;
-    left: 80px;
+    top: 5px;
+    left: 95px;
     border-radius: 50%;
-    cursor: pointer;
 }
-.form__sex2{
-    
-    cursor: pointer;
+.form__sex4::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-green);
+    position: absolute;
+    top: 6px;
+    left: 95px;
+    border-radius: 50%;
+    opacity: 0;
 }
-.form__sex4{
-    
-    cursor: pointer;
-}
-.form__sex1:checked{
+.form__sex3:checked + .form__sex4::after{
     opacity: 1;
+    z-index: 1;
 }
