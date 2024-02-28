@@ -436,85 +436,191 @@ max-width: 375px;
 
 
 /* Слайдер */
-.feedback__blockquote{
+.feedback {
+    padding: 93px 0;
+  }
+  .feedback__row {
+    width: 654px;
+    text-align: center;
+  }
+  .label_green {
+    background-color: var(--color-green);
+    color: var(--color-white);
+  }
+  
+  .feedback__blockquote {
     font-size: 40px;
     color: #cecece;
     margin-top: 23px;
     margin-bottom: 33px;
-}
-.feedback__akcent{
+  }
+  .feedback__accent {
     color: var(--color-black);
-}
-.feedback__slider{
-    /* border: 1px solid blue; */
-    height: 300px;  
+  }
+  
+  .feedback__slider {
+    height: 300px;
     overflow: hidden;
-}
-.feedback__control{
+    position: relative;
+  }
+  
+  .feedback__control {
     appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid var(--color-black);
-    margin-right: 15px;
-    margin-top: 255px;
+    border: 2px solid var(--color-white);
     position: relative;
+    top: 260px;
     cursor: pointer;
     z-index: 1;
-}
-.feedback__control:last-child{
-    margin-right: 0px;
-}
-.feedback__control::after{
-    content: '';
+    display: none;
+    /* visibility: hidden; */
+  }
+  .feedback__control:not(:last-child) {
+    margin-right: 15px;
+  }
+  
+  .feedback__control::after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     opacity: 0;
-    transition: 0.2ms;
-}
-.feedback__control:checked::after{
+    transition: 0.2s;
+  }
+  
+  .feedback__control:checked::after {
     opacity: 1;
-}
-.feedback__slides{
-    /* border: 5px solid orange; */
+  }
+  
+  .feedback__slides {
+    /* background-color: #4eaf4e; */
     height: 300px;
-    width: 1964px;
+    width: 1962px;
     display: flex;
     position: relative;
-    top: -330px;
+    top: -29px;
     transition: 0.2s;
-}
-.feedback__slide{
+  }
+  
+  .feedback__slide {
     width: 654px;
     height: 100%;
+    background-size: cover;
     background-position: center;
-
-}
-.feedback__slide1{
-    background-image: url(img/slide1.png);
-    background-size: cover;
-}
-.feedback__slide2{
-    background-image: url(img/slide2.png);
-    background-size: cover;
-}
-.feedback__slide3{
-    background-image: url(img/slide3.png);
-    background-size: cover;
-}
-#control1:checked ~ .feedback__slides{
+    padding: 30px 0;
+  }
+  
+  .feedback__slide1 {
+    /* background-image: url(img/49465f189475c4a60f8b3ab77115732f.jpeg); */
+  }
+  
+  .feedback__slide2 {
+    /* background-image: url(img/ferrari-mashina-avto-auto.jpg); */
+  }
+  .feedback__slide3 {
+    /* background-image: url(img/Rolls-Royce_2016_Spofec_489580.jpg); */
+  }
+  
+  .feedback__slide-img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+  }
+  
+  .feedback__info {
+    margin-top: 27px;
+  }
+  .feedback__name {
+    font-size: 20px;
+  }
+  .feedback__position {
+    margin-top: 7px;
+    display: inline-block;
+    color: var(--color-green);
+  }
+  
+  #control1:checked ~ .feedback__slides {
     left: 0;
-    
-}
-#control2:checked ~ .feedback__slides{
-    left:-654px;
-}
-#control3:checked ~ .feedback__slides{
-    left:-1308px;
-}
+  }
+  #control2:checked ~ .feedback__slides {
+    left: -654px;
+  }
+  #control3:checked ~ .feedback__slides {
+    left: -1308px;
+  }
+  
+  .feedback__buttons {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+  }
+  .feedback__prev,
+  .feedback__next {
+    background-color: var(--color-gray);
+    border-radius: 42px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .feedback__prev:hover > .feedback__prev-icon,
+  .feedback__next:hover > .feedback__next-icon {
+    background-color: var(--color-yellow);
+  }
+  
+  .feedback__prev {
+    position: absolute;
+    left: 0;
+    padding: 8px;
+    padding-right: 25px;
+  }
+  .feedback__next {
+    position: absolute;
+    right: 0;
+    padding: 8px;
+    padding-left: 25px;
+  }
+  .feedback__prev-icon,
+  .feedback__next-icon {
+    transition: 0.2s;
+  }
+  .feedback__prev-icon,
+  .feedback__next-icon {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 43px;
+    margin-right: 11px;
+  }
+  .feedback__next-icon {
+    margin-right: 0;
+    margin-left: 11px;
+  }
+  
+  .feedback__prev-label,
+  .feedback__next-label {
+    font-weight: bold;
+  }
+  
+  .feedback__buttons-slide1,
+  .feedback__buttons-slide2,
+  .feedback__buttons-slide3 {
+    display: none;
+  }
+  
+  #control1:checked ~ .feedback__buttons > .feedback__buttons-slide1,
+  #control2:checked ~ .feedback__buttons > .feedback__buttons-slide2,
+  #control3:checked ~ .feedback__buttons > .feedback__buttons-slide3 {
+    display: block;
+  }
