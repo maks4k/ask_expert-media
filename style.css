@@ -725,4 +725,84 @@ max-width: 375px;
   #control3:checked ~ .feedback__buttons > .feedback__buttons-slide3 {
     display: block;
   }
-  
+.text{
+    height: 100px;
+    background-color: blue;
+}  
+/* новая минюшка для планшета изначально она скрыта */
+.mobile-nav{
+    width: 30%;
+    background-color: var(--color-dark);
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    display: none;
+    padding-top: 30vh;
+}
+.mobile-nav__menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.mobile-nav__link{
+    color: var(--color-white);
+    font-size: 20px;
+    
+}
+.mobile-wrap__phone{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+/* стилизация кнопки тригера для меню */
+.modal-btn{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+.modal-btn::after{
+    content: url(img/menu-30.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+/* описание селектора когда в нашем блоке есть кнопка с класом btn мы можем обратиться к следующиму блоку через селектор has крч обращение идет к предыдущему элементу */
+/* .header__row:has(.modal-btn:checked)+.mobile-nav{
+    display: block;
+    z-index: 1;
+} */
+/* Медизапросы */
+/* 1- сносим врхнее меню и убираем его врпаво под планшеты */
+@media screen and (max-width: 992px) {
+    .nav, .header__phone{
+        display: none;
+    }
+    .mobile-nav{
+        /* display:block; */
+    }
+    .modal-btn{
+        display: block;
+    }
+    .header__row:has(.modal-btn:checked)+.mobile-nav{
+        display: block;
+        z-index: 1;
+    }
+}
+/* 2поправляем текст кнопки в медизапросах на мобильный телефон */
+@media screen and (max-width:576px) {
+    .mobile-nav__phone-text{
+        display: none;
+    }
+    .mobile-nav__phone{
+        background-color: transparent;
+        padding: 0;
+    }
+    
+}
