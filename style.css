@@ -5,6 +5,8 @@
     --color-gray:#ebebeb;
     --color-white:#fff;
     --color-black:#151515;
+    --heading-fint-size:50px;
+    --html-font-size:16px;
 }
 body,*{
     padding: 0;
@@ -93,7 +95,10 @@ li{
     background-color: var(--color-yellow);
 }
 .hero__heaiding{
-    font-size: 50px;
+    /* font-size: 50px; */
+    /* font-size: calc(var(--heading-fint-size)) / (var(--html-font-size)); */
+    /* html16pxh1/50px */
+    font-size: 3.125rem;
 }
 .hero__label{
     display: inline-block;
@@ -103,6 +108,8 @@ li{
     margin-top: 20px;
     margin-bottom: 29px;
 }
+
+
 /* .hero__row{
     background-image: url(img/Photo.png);
     background-position: right;
@@ -122,8 +129,12 @@ li{
 } */
 .hero__row{
     display: flex;
-    gap: 89px;
+    gap: 140px;
+    
 }
+.hero__image-wrapper {
+    width: 20%;
+  }
 .advantages{
     position: relative;
     top: -80px;
@@ -229,7 +240,7 @@ li{
 max-width: 375px;
 }
 .statistics__heading{
-    font-size: 45px;
+    font-size: 2.57rem;
     margin-top: 22px;
     margin-bottom: 20px;
 }
@@ -427,7 +438,7 @@ max-width: 375px;
 }
 .author__heading{
     color: var(--color-gray);
-    font-size: 43px;
+    font-size: 3.07rem;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -537,11 +548,12 @@ max-width: 375px;
     opacity: 1;
     z-index: 1;
 }
+/* СЛАЙДЕР */
 .feedback {
     padding: 93px 0;
   }
   .feedback__row {
-    width: 654px;
+    max-width: 654px;
     text-align: center;
   }
   .label_green {
@@ -550,7 +562,7 @@ max-width: 375px;
   }
   
   .feedback__blockquote {
-    font-size: 40px;
+    font-size: 2.85rem;
     color: #cecece;
     margin-top: 23px;
     margin-bottom: 33px;
@@ -780,6 +792,37 @@ max-width: 375px;
 } */
 /* Медизапросы */
 /* 1- сносим врхнее меню и убираем его врпаво под планшеты */
+@media screen and (max-width:1750px) {
+    .advantages{
+        position: static;
+        padding-block: 10px;
+      
+    }
+    
+}
+@media screen and (max-width:1400px) {
+    .advantages__row{
+        justify-content: center;
+    }
+    
+}
+@media screen and (amx-width:1200px) {
+    .statistics__row{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width:1040px) {
+    .hero__image{
+        width: 35vw;
+    }
+    .hero-row{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+    }
+}
 @media screen and (max-width: 992px) {
     .nav, .header__phone{
         display: none;
@@ -791,9 +834,54 @@ max-width: 375px;
         display: block;
         z-index: 1;
     }
+    .hero__image{
+        display: none;
+    }
+    .hero__row{
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        padding-block: 70px;
+    }
+    .advantages-card{
+        width: 100%;
+
+    }
+}
+@media screen and (max-width: 768px){
+    .feedback__slide-img{
+       margin: 0 auto;
+
+    }
+    
+    .statistics__info{
+        text-align: center;
+    }
+    .statistics__items{
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .hero__row{
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .feedback__next{
+        padding: 0;
+    }
+    .feedback__next-label,.feedback__prev-label{
+        display: none;
+        background: transparent;
+    }
+    
 }
 /* 2поправляем текст кнопки в медизапросах на мобильный телефон */
-@media screen and (max-width:576px) {
+@media screen and (max-width:576px) 
+    {
+    html{
+        font-size: 12px;
+    }    
     .mobile-nav__phone-text{
         display: none;
     }
@@ -802,4 +890,11 @@ max-width: 375px;
         padding: 0;
     }
     
+   .feedback__slides{
+    margin: 0 auto;
+   }
+    .feedback__slide-img{
+        text-align: center;
+        
+    }
 }
