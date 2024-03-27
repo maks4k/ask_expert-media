@@ -334,7 +334,7 @@ max-width: 375px;
     margin-top: 30px;
 }
 .latest{
-    width: 1920px;
+    max-width: 1920px;
     height: 2000px;
     background: linear-gradient(rgba(24, 24, 24, 0.95),rgba(24, 24, 24, 0.95)),url(img/Photo-latest.png);
     background-repeat: no-repeat;
@@ -375,8 +375,8 @@ max-width: 375px;
     line-height: 3.5;
 }
 .latest__row{
-    width: 1201px;
-    height: 1800px;
+    max-width: 1201px;
+    max-height: 1800px;
 }
 .latest__card{
     margin: auto 0;
@@ -629,18 +629,6 @@ max-width: 375px;
     background-position: center;
     padding: 30px 0;
   }
-  
-  .feedback__slide1 {
-    /* background-image: url(img/49465f189475c4a60f8b3ab77115732f.jpeg); */
-  }
-  
-  .feedback__slide2 {
-    /* background-image: url(img/ferrari-mashina-avto-auto.jpg); */
-  }
-  .feedback__slide3 {
-    /* background-image: url(img/Rolls-Royce_2016_Spofec_489580.jpg); */
-  }
-  
   .feedback__slide-img {
     width: 210px;
     height: 210px;
@@ -785,11 +773,7 @@ max-width: 375px;
     left: 0;
     z-index: 2;
 }
-/* описание селектора когда в нашем блоке есть кнопка с класом btn мы можем обратиться к следующиму блоку через селектор has крч обращение идет к предыдущему элементу */
-/* .header__row:has(.modal-btn:checked)+.mobile-nav{
-    display: block;
-    z-index: 1;
-} */
+
 /* Медизапросы */
 /* 1- сносим врхнее меню и убираем его врпаво под планшеты */
 @media screen and (max-width:1750px) {
@@ -804,14 +788,46 @@ max-width: 375px;
     .advantages__row{
         justify-content: center;
     }
+    .item-1_2{
+        display: none;
+    }
+    .item-1_3{
+        display: none;
+    }
     
 }
-@media screen and (amx-width:1200px) {
+@media screen and (max-width:1200px) {
     .statistics__row{
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+    .latest__project{
+        justify-content: center;
+    }
+    /* .latest__card{
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .item-6,.item-5{
+        display: none;
+    }
+    .item-7{
+        position: absolute;
+        top:1500px;
+        left: 500px;
+
+    }
+    .item-4{
+        position: absolute;
+        top:750px;
+        left:600px;
+    }
+    .item-3{
+        position: absolute;
+        top: 700px;
+        left: 400x;
+
+    } */
 }
 @media screen and (max-width:1040px) {
     .hero__image{
@@ -830,6 +846,11 @@ max-width: 375px;
     .modal-btn{
         display: block;
     }
+    /* описание селектора когда в нашем блоке есть кнопка с класом btn мы можем обратиться к следующиму блоку через селектор has крч обращение идет к предыдущему элементу */
+/* .header__row:has(.modal-btn:checked)+.mobile-nav{
+    display: block;
+    z-index: 1;
+} */
     .header__row:has(.modal-btn:checked)+.mobile-nav{
         display: block;
         z-index: 1;
@@ -842,6 +863,9 @@ max-width: 375px;
         text-align: center;
         flex-wrap: wrap;
         padding-block: 70px;
+    }
+    .advantages{
+        padding-inline: 15px;
     }
     .advantages-card{
         width: 100%;
@@ -889,12 +913,14 @@ max-width: 375px;
         background-color: transparent;
         padding: 0;
     }
-    
-   .feedback__slides{
-    margin: 0 auto;
-   }
-    .feedback__slide-img{
-        text-align: center;
-        
+    /* sldier */
+    .feedback__slide1{
+       width: 100vw;  
+    }
+    .feedback__slide2{
+        margin-left: 70px;
+    }
+    .feedback__slide3{
+        margin-right: 70px;
     }
 }
