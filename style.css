@@ -338,9 +338,13 @@ max-width: 375px;
     height: 2000px;
     background: linear-gradient(rgba(24, 24, 24, 0.95),rgba(24, 24, 24, 0.95)),url(img/Photo-latest.png);
     background-repeat: no-repeat;
-    background-position: 50% 20%; 
+    background-position: 50% 20%;
+    background-size: cover; 
     width: 100%;
-}
+    border: 2px solid red;
+    height: 100%;
+    
+   }
 .latest__buton{
     border-radius: 20px;
     background-color: #4eaf4e;
@@ -390,10 +394,13 @@ max-width: 375px;
    position: relative;
 }
 .item-1{
+    width: 100%;
     width: 366px;
     height: 344px;
+    border-radius: 20px;
 }
 .item-2{
+    border-radius: 20px;
     width: 783px;
     height: 344px;
 }
@@ -406,6 +413,7 @@ max-width: 375px;
     height: 344px;
 }
 .item-5{
+    border-radius: 20px;
     width: 366px;
     height: 344px;
 }
@@ -802,32 +810,70 @@ max-width: 375px;
         flex-wrap: wrap;
     }
     .latest__project{
-        justify-content: center;
+        justify-content: space-around;
     }
-    /* .latest__card{
-        flex-wrap: wrap;
+    .latest__card{
         position: relative;
     }
-    .item-6,.item-5{
+    .latest__card-box3{
         display: none;
-    }
-    .item-7{
         position: absolute;
-        top:1500px;
-        left: 500px;
-
     }
-    .item-4{
-        position: absolute;
-        top:750px;
-        left:600px;
+    .latest__card-box4{
+        position: relative;
+        left: -135px;
     }
-    .item-3{
-        position: absolute;
-        top: 700px;
-        left: 400x;
-
-    } */
+    .latest__card-box5{
+        margin-left: 10px;
+    }
+    .latest__card-box7{
+        margin-right: 10px;
+    }
+    .latest__card-box9{
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width:1152px){
+    .latest__card-box6{
+        position: relative;
+        right: 90px;
+    }
+    .latest__card-box5{
+        position: relative;
+        left: 60px;
+    }
+    .latest__card-box8{
+        position: relative;
+        right: 390px;
+        bottom: 10px;
+    }
+    .latest__card-box9{
+        position: relative;
+        right: -110px;
+    }
+    .latest__card-box7{
+        position: relative;
+        left: 70px;
+        top: 10px;
+    }
+}
+@media screen and (max-width:1090px){
+    .latest__card-box5{
+        position: relative;
+        left: 30px;
+    }
+    .latest__card-box7{
+        position: relative;
+        left: 45px;
+        top: 10px;
+    }
+    .latest__card-box9{
+        position: relative;
+        right: -90px;
+    }
+    .latest__project{
+        justify-content: space-evenly;
+    }
 }
 @media screen and (max-width:1040px) {
     .hero__image{
@@ -839,6 +885,7 @@ max-width: 375px;
 
     }
 }
+
 @media screen and (max-width: 992px) {
     .nav, .header__phone{
         display: none;
@@ -871,6 +918,29 @@ max-width: 375px;
         width: 100%;
 
     }
+    .latest__card-box4{
+        margin-left: 210px;
+    }
+    .latest__card-box5{
+        position: relative;
+        left: 10px;
+    }
+    .latest__card-box6{
+        position: relative;
+        right: 32px;
+    }
+    .latest__card-box7{
+        position: relative;
+        left: 18px;
+    }
+    .latest__card-box8{
+        position: relative;
+        left: -330px;
+    }
+    .latest__card-box9{
+        position: relative;
+        right: -110px;
+    }
 }
 @media screen and (max-width: 768px){
     .feedback__slide-img{
@@ -898,9 +968,31 @@ max-width: 375px;
         display: none;
         background: transparent;
     }
-    
+    .item-2{
+        width: 600px;
+    }
+    .latest__card-box4{
+        margin-right: 600px;  
+    }
+    .latest__card-box5{
+        margin-right:70px;
+    }
+    .latest__card-box6{
+        margin-left: 22px;
+    }
 }
 /* 2поправляем текст кнопки в медизапросах на мобильный телефон */
+@media screen and (max-width:688px)
+     {
+    .item2{
+        width: 100px;
+    }
+    .latest__card-box4{
+        margin-right: 110;
+        border: 20px solid red;
+    }
+    
+}
 @media screen and (max-width:576px) 
     {
     html{
@@ -922,5 +1014,20 @@ max-width: 375px;
     }
     .feedback__slide3{
         margin-right: 70px;
+    }
+    .item-2{
+        width: 470px;
+    }
+    .latest__project{
+        align-items: start;
+    }
+    .latest__card-box4{
+        margin-left: 180px;
+    }
+    .latest__card-box5{
+        margin-left: 55px;
+    }
+    .latest__card-box6{
+        margin-left: 66px;
     }
 }
