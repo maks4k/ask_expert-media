@@ -983,14 +983,33 @@ max-width: 375px;
 /* 2поправляем текст кнопки в медизапросах на мобильный телефон */
 @media screen and (max-width:688px)
      {
-    .item2{
+    /* .item2{
         width: 100px;
     }
     .latest__card-box4{
         margin-right: 110;
         
+    } */
+    .latest__card-box4{
+        display: none;
     }
-    
+    .latest__card-box6{
+        display: none;
+    }
+    .latest__card-box7{
+        display: none;
+    }
+    .latest__card-box8{
+        position: relative;
+        top: 350px;
+        left: -250px;
+    }
+    .latest__card-box9{
+        position: relative;
+        top: 340px;
+        left: -50px;
+
+    }
 }
 @media screen and (max-width:576px) 
     {
@@ -1018,15 +1037,25 @@ max-width: 375px;
         width: 470px;
     }
     .latest__project{
-        align-items: start;
+        margin-bottom: 100px;
+        justify-content: center;
     }
-    .latest__card-box4{
-        margin-left: 180px;
+    .latest__buton{
+        line-height: 25px;
     }
     .latest__card-box5{
         margin-left: 55px;
     }
-    .latest__card-box6{
-        margin-left: 66px;
+    .latest__link{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .latest__card-box8{
+       margin-right: 50px;
+    }
+    .latest__card-box9{
+        margin-right: 70px;
+        margin-top: 10px;
     }
 }
