@@ -361,8 +361,8 @@ max-width: 375px;
     justify-content: space-between;
 }
 .latest__nav{
-    width: 324px;
-    height: 84px;
+   max-width: 324px;
+    max-height: 84px;
 }
 .latest__heading{
     color: var(--color-white);
@@ -1058,4 +1058,24 @@ max-width: 375px;
         margin-right: 70px;
         margin-top: 10px;
     }
+}
+@media screen and (max-width:485px) {
+    .latest__project{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;    
+    }
+    .latest__buton{
+        margin-left: 30px;
+    }
+    .latest__card-box5{
+        position: relative;
+        top: -10px;
+        
+    }
+   .latest__card-box9{
+    display: none;
+   }
+    
 }
